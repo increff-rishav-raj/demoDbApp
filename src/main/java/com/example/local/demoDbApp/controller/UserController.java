@@ -4,6 +4,7 @@ import com.example.local.demoDbApp.api.UserApi;
 import com.example.local.demoDbApp.model.UserData;
 import com.example.local.demoDbApp.model.UserForm;
 import io.swagger.v3.oas.annotations.Operation;
+import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -17,6 +18,7 @@ import java.util.Map;
 
 @RestController
 @RequestMapping(value = "/admin")
+@Log4j2
 public class UserController {
 
 
@@ -35,11 +37,15 @@ public class UserController {
         return api.getAll();
     }
 
-    @Operation(summary = "Get secret", description = "Get secrets")
-    @RequestMapping(value = "/secret", method = RequestMethod.GET)
-    public Map<String, String> getSecret() throws IllegalAccessException {
-        Map<String,String> map = new HashMap<>();
-        return map;
+    @Operation(summary = "Print Log", description = "Print Logs")
+    @RequestMapping(value = "/log", method = RequestMethod.GET)
+    public void getSecret() {
+        log.info("Info");
+        log.debug("Debug");
+        log.error("Error");
+        log.warn("Warn");
+        log.fatal("Fatal");
+        log.trace("Trace");
     }
 
 }

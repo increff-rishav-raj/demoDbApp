@@ -55,6 +55,7 @@ public class DemoDbAppApplication {
 
 
 	public static void main(String[] args) {
+		VaultPropertyLocator.setBasePath("kv/data/internal/demoDbApp");
 		SpringApplication.run(DemoDbAppApplication.class, args);
 //		LogManager.getLogger("elasticsearch").log(Level.ERROR,"Help me");
 	}
@@ -62,7 +63,6 @@ public class DemoDbAppApplication {
 //	@Bean
 //	public PropertySourceFactory getPropertySourceLocator() {
 //		VaultPropertyLocator factory = new VaultPropertyLocator();
-//		factory.setPath("kv/data/internal/demoDbApp");
 //		return factory;
 //	}
 

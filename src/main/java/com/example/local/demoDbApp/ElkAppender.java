@@ -12,6 +12,7 @@ import lombok.extern.log4j.Log4j2;
 import org.apache.http.Header;
 import org.apache.http.HttpHost;
 import org.apache.http.message.BasicHeader;
+import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.core.*;
 import org.apache.logging.log4j.core.appender.AbstractAppender;
 import org.apache.logging.log4j.core.config.Property;
@@ -29,6 +30,8 @@ import java.util.Objects;
 
 @Plugin(name = "ElkAppender", category = Core.CATEGORY_NAME, elementType = Appender.ELEMENT_TYPE, printObject = true)
 public class ElkAppender extends AbstractAppender {
+
+//    private static final Logger log = (Logger) LogManager.getLogger(ElkAppender.class);
 
     private static String appName, esHost, esUsername, esPassword;
     private static Integer esPort;
@@ -69,7 +72,6 @@ public class ElkAppender extends AbstractAppender {
     private static void onResponse(IndexResponse response, Throwable exception) {
         System.out.println("here");
         if (exception != null) {
-            System.out.println(exception.getMessage());
 //            String errorStackTrace = DtoHelper.getErrorStackTraceString(exception);
 //            log.error("EsClient:RuntimeException: Unable to connect/send message to ElasticSearch\n" + errorStackTrace);
         } else {
@@ -79,6 +81,7 @@ public class ElkAppender extends AbstractAppender {
 
     @Override
     public void append(LogEvent event) {
+        System.out.println("Event Detected");
         System.out.println(event.getMessage().getFormattedMessage());
 //        StringReader jsonStringReader = new StringReader(DtoHelper.convertToElasticSearchRequest(event, appName));
 //        client.index(i -> {
