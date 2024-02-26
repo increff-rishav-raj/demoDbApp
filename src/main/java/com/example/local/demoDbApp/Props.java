@@ -7,15 +7,15 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 
 @Getter
 @Setter
-@ConfigurationProperties()
+@ConfigurationProperties
 public class Props {
-    @Value("${demo.url:URL}")
+    @Value("${demo.url}")
     private String url;
-    @Value("${demo.password:PASS}")
+    @Value("${demo.password}")
     private String password;
-    @Value("${auth.baseUrl:URL}")
+    @Value("${auth.baseUrl}")
     private String authBaseUrl;
-    @Value("${auth.appToken:TOKEN}")
+    @Value("${auth.appToken}")
     private String authAppToken;
 
     @Value("${rest.max.connection.per.route:100}")

@@ -48,46 +48,13 @@
 			<groupId>com.increff.commons</groupId>
 			<artifactId>commons-springboot-server</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
-			<exclusions>
-				<exclusion>
-					<artifactId>spring-cloud-starter-vault-config</artifactId>
-					<groupId>org.springframework.cloud</groupId>
-				</exclusion>
-			</exclusions>
 		</dependency>
-
-		<!-- https://mvnrepository.com/artifact/org.springframework.vault/spring-vault-core -->
-		<dependency>
-			<groupId>org.springframework.vault</groupId>
-			<artifactId>spring-vault-core</artifactId>
-			<version>3.1.0</version>
-		</dependency>
-
 
 		<dependency>
 			<groupId>com.increff.springboot.account</groupId>
 			<artifactId>account-client</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
-
-<!--		&lt;!&ndash; https://mvnrepository.com/artifact/org.appenders.log4j/log4j2-elasticsearch-hc &ndash;&gt;-->
-<!--		<dependency>-->
-<!--			<groupId>org.appenders.log4j</groupId>-->
-<!--			<artifactId>log4j2-elasticsearch-hc</artifactId>-->
-<!--			<version>1.6.1</version>-->
-<!--		</dependency>-->
-
-<!--		<dependency>-->
-<!--			<groupId>com.lmax</groupId>-->
-<!--			<artifactId>disruptor</artifactId>-->
-<!--			<version>3.4.2</version>-->
-<!--		</dependency>-->
-
-<!--		<dependency>-->
-<!--			<groupId>io.netty</groupId>-->
-<!--			<artifactId>netty-buffer</artifactId>-->
-<!--			<version>4.1.32.Final</version>-->
-<!--		</dependency>-->
 
 	</dependencies>
 

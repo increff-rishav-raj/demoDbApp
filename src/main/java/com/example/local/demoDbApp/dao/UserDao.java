@@ -1,7 +1,7 @@
 package com.example.local.demoDbApp.dao;
 
 import com.example.local.demoDbApp.pojo.UserPojo;
-import com.increff.commons.springboot.db.AbstractDao;
+import com.increff.commons.springboot.db.dao.AbstractDao;
 import jakarta.persistence.TypedQuery;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
